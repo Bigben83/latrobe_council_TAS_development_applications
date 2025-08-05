@@ -14,7 +14,7 @@ url = "https://www.latrobe.tas.gov.au/services/building-and-planning-services/pl
 # Step 1: Fetch the page content
 begin
   logger.info("Fetching page content from: #{url}")
-  page_html = open(url).read
+  page_html = open(url, "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36").read
   logger.info("Successfully fetched page content.")
 rescue => e
   logger.error("Failed to fetch page content: #{e}")
